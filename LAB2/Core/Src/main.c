@@ -75,7 +75,8 @@ static void MX_USB_PCD_Init(void);
  * @brief  The application entry point.
  * @retval int
  */
-void myPrintf(const char *fmt, ...)
+
+void myPrintf1(const char *fmt, ...)
 {
   char buffer[128];
   va_list args;
@@ -83,8 +84,111 @@ void myPrintf(const char *fmt, ...)
   vsnprintf(buffer, sizeof(buffer), fmt, args);
   va_end(args);
   HAL_UART_Transmit(&huart2, (uint8_t *)buffer, strlen(buffer), HAL_MAX_DELAY);
-  HAL_Delay(100);
+  HAL_Delay(1000);
 }
+
+void myPrintf2(int a, int b)
+{
+  char buffer[128];
+  int LHS = (a + b) * (a + b);         // LHS expression
+  int RHS = a * a + 2 * a * b + b * b; // RHS expression
+
+  int len = snprintf(buffer, sizeof(buffer),
+                     "For a = %d, b = %d:\r\n"
+                     "LHS = (a + b)^2 = %d\r\n"
+                     "RHqqqqqqqqqqqS = a^2 + 2ab + b^2 = %d\r\n",
+                     a, b, LHS, RHS); // printing multiple statements using variables declared as multiple arguments
+
+  HAL_UART_Transmit(&huart2, (uint8_t *)buffer, len, HAL_MAX_DELAY); // Transmitting the string via UART
+
+  if (LHS == RHS)
+  {
+    myPrintf1("The identity holds.\r\n");
+  }
+  else
+  {
+    myPrintf1("The identity does not hold.\r\n");
+  } // check statements
+  HAL_Delay(1000);
+}
+void myPrintf3(char *str)
+{
+  int key = 2275142;     // student ID
+  int shift = key % 256; // Calculate shift value
+
+  myPrintf1("Original string: %s\r\n ", str);
+
+  // Encryption
+  for (int i = 0; i < strlen(str); i++)
+  {
+    str[i] = str[i] + shift;
+  }
+  myPrintf1("Encrypted string: %s\r\n", str);
+
+  // Decryption
+  for (int i = 0; i < strlen(str); i++)
+  {
+    str[i] = str[i] - shift;
+  }
+  myPrintf1("Decrypted string: %s\r\n", str);
+}
+
+void myPrintf4(int a[2][2], int b[2][2])
+{
+  int c[2][2];
+  // Matrix multiplication
+  int i, j, k;
+  for (i = 0; i < 2; i++)
+  {
+    for (j = 0; j < 2; j++)
+    {
+      c[i][j] = 0;
+      for (k = 0; k < 2; k++)
+      {
+        c[i][j] += a[i][k] * b[k][j];
+      }
+    }
+
+    myPrintf1("Matrix A:\r\n");
+    for (i = 0; i < 2; i++)
+    {
+      for (j = 0; j < 2; j++)
+      {
+        myPrintf1("%d ", a[i][j]);
+      }
+      myPrintf1("\r\n");
+    }
+    myPrintf1("Matrix B:\r\n");
+    for (i = 0; i < 2; i++)
+    {
+      for (j = 0; j < 2; j++)
+      {
+        myPrintf1("%d ", b[i][j]);
+      }
+      myPrintf1("\r\n");
+    }
+    myPrintf1("Matrix C:\r\n");
+    for (i = 0; i < 2; i++)
+    {
+      for (j = 0; j < 2; j++)
+      {
+        myPrintf1("%d ", c[i][j]);
+      }
+      myPrintf1("\r\n");
+    }
+  }
+}
+
+void myPrintf5(){
+for (int i=100; i<1000; i++){
+  int d1= i/100;
+  int d2= (i%100)/10;
+  int d3= i%10;
+  if (i == (d1*d1*d1 + d2*d2*d2 + d3*d3*d3))
+    myPrintf1("%d is an Armstrong number\r\n", i);
+}
+}
+
 
 int main(void)
 {
@@ -121,15 +225,23 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    int x = 42;
-    int y = 3;
 
-    myPrintf("Value of x = %d, y = %d\r\n", x, y);
+    int x = 2;
+    int y = 3;
+    int a[2][2] = {{1, 2}, {3, 4}};
+    int b[2][2] = {{5, 6}, {7, 8}};
+    myPrintf1("Value of x = %d, y = %d\r\n", x, y); // calling task1 function
+    myPrintf2(x, y);                                // calling task2 function
+    myPrintf3("Microcontrollers");                  // calling task3 function
+    myPrintf4(a, b);                                // calling task4 function
+    myPrintf5();                                // calling task4 function
+    HAL_Delay(3000);
   }
   /* USER CODE END 3 */
 }

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "LAB1.elf"
+			"path" : "LAB2.elf"
 		}
 	],
 	"backtrace" : 1,
@@ -53,7 +53,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11"
+					"fragment" : " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11"
 				}
 			],
 			"defines" : 
@@ -75,23 +75,23 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/abbas/MCI-COURSE/LAB1/cmake/stm32cubemx/../../Core/Inc"
+					"path" : "/home/abbas/MCI-COURSE/LAB2/cmake/stm32cubemx/../../Core/Inc"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/abbas/MCI-COURSE/LAB1/cmake/stm32cubemx/../../Drivers/STM32F3xx_HAL_Driver/Inc"
+					"path" : "/home/abbas/MCI-COURSE/LAB2/cmake/stm32cubemx/../../Drivers/STM32F3xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/abbas/MCI-COURSE/LAB1/cmake/stm32cubemx/../../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy"
+					"path" : "/home/abbas/MCI-COURSE/LAB2/cmake/stm32cubemx/../../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/abbas/MCI-COURSE/LAB1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F3xx/Include"
+					"path" : "/home/abbas/MCI-COURSE/LAB2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F3xx/Include"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/abbas/MCI-COURSE/LAB1/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+					"path" : "/home/abbas/MCI-COURSE/LAB2/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "C",
@@ -116,7 +116,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g"
+					"fragment" : " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g"
 				}
 			],
 			"defines" : 
@@ -138,23 +138,23 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/abbas/MCI-COURSE/LAB1/cmake/stm32cubemx/../../Core/Inc"
+					"path" : "/home/abbas/MCI-COURSE/LAB2/cmake/stm32cubemx/../../Core/Inc"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/abbas/MCI-COURSE/LAB1/cmake/stm32cubemx/../../Drivers/STM32F3xx_HAL_Driver/Inc"
+					"path" : "/home/abbas/MCI-COURSE/LAB2/cmake/stm32cubemx/../../Drivers/STM32F3xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/abbas/MCI-COURSE/LAB1/cmake/stm32cubemx/../../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy"
+					"path" : "/home/abbas/MCI-COURSE/LAB2/cmake/stm32cubemx/../../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/abbas/MCI-COURSE/LAB1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F3xx/Include"
+					"path" : "/home/abbas/MCI-COURSE/LAB2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F3xx/Include"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/abbas/MCI-COURSE/LAB1/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+					"path" : "/home/abbas/MCI-COURSE/LAB2/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "ASM",
@@ -171,17 +171,17 @@
 			"id" : "STM32_Drivers::@768a070a0fe75716b479"
 		}
 	],
-	"id" : "LAB1::@6890427a1f51a3e7e1df",
+	"id" : "LAB2::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3",
+				"fragment" : "-mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T \"/home/abbas/MCI-COURSE/LAB1/STM32F303XX_FLASH.ld\" --specs=nano.specs -Wl,-Map=LAB1.map -Wl,--gc-sections -Wl,--print-memory-usage",
+				"fragment" : "-mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T \"/home/abbas/MCI-COURSE/LAB2/STM32F303XX_FLASH.ld\" --specs=nano.specs -Wl,-Map=LAB2.map -Wl,--gc-sections -Wl,--print-memory-usage",
 				"role" : "flags"
 			},
 			{
@@ -192,8 +192,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "LAB1",
-	"nameOnDisk" : "LAB1.elf",
+	"name" : "LAB2",
+	"nameOnDisk" : "LAB2.elf",
 	"paths" : 
 	{
 		"build" : ".",

@@ -47,7 +47,7 @@
 						0,
 						1
 					],
-					"name" : "LAB1",
+					"name" : "LAB2",
 					"targetIndexes" : 
 					[
 						0,
@@ -59,15 +59,15 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "LAB1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-LAB1-Debug-2e8974b8cfbb48aa0b70.json",
-					"name" : "LAB1",
+					"id" : "LAB2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LAB2-Debug-13d782d4b1413043f518.json",
+					"name" : "LAB2",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "STM32_Drivers::@768a070a0fe75716b479",
-					"jsonFile" : "target-STM32_Drivers-Debug-7da5f7fc7671ac5f1430.json",
+					"jsonFile" : "target-STM32_Drivers-Debug-7ccf3c5c7fe4d3f09675.json",
 					"name" : "STM32_Drivers",
 					"projectIndex" : 0
 				}
@@ -77,8 +77,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/abbas/MCI-COURSE/LAB1/build/Debug",
-		"source" : "/home/abbas/MCI-COURSE/LAB1"
+		"build" : "/home/abbas/MCI-COURSE/LAB2/build/Debug",
+		"source" : "/home/abbas/MCI-COURSE/LAB2"
 	},
 	"version" : 
 	{
